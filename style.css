@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient( #9b27ca 0%, #9927cf 0% , #d33639 100% , #f92121 100%);
+    min-height: 100vh;
+}
+
+.wrapper {
+    position: absolute;
+    padding: 40px 30px;
+    background: #fff;
+    border-radius: 15px;
+    max-width: 480px;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+    pointer-events: none;
+    transform: translate(-50%,-50%) scale(1.2);
+    box-shadow: 10px 20px 15px rgba(0, 0, 0, 0.06);
+    transition: opacity 0.2s 0s ease-in-out ,
+                transform 0.2s 0s ease-in-out;
+}
+
+.wrapper.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%,-50%) scale(1);
+} 
+
+.wrapper .content,
+.content .warn-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.wrapper .content {
+    flex-direction: column;
+}
+
+.content .warn-icon {
+    height: 115px;
+    width: 115px;
+    border-radius: 50%;
+    background: linear-gradient( #9b27ca 0%, #9927cf 0% , #d33639 100% , #f92121 100%);
+}
+
+.warn-icon span {
+    height: 100px;
+    width: 100px;
+    background: #fff;
+    border-radius: inherit;
+}
+
+.warn-icon span i {
+    font-size: 50px;
+    background: linear-gradient( #9b27ca 0%, #9927cf 0% , #d33639 100% , #f92121 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 25px;
+}
+
+.content h2 {
+    margin-top: 35px;
+    font-size: 32px;
+}
+
+.content p {
+    font-size: 19px;
+    text-align: center;
+    margin-top: 20px;
+    letter-spacing: 1px;
+    line-height: 25px;
+    color: rgba(0, 0, 0, 0.822);
+}
+
+.content button {
+    margin-top: 30px;
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    color: #fff;
+    border-radius: 6px;
+    cursor: pointer;
+    background: linear-gradient( #9b27ca 0%, #9927cf 0% , #d33639 100% , #f92121 100%);
+}
